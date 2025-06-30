@@ -16,10 +16,10 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-sm border-b z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-b z-50 colorful-shadow">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold text-primary">
+          <div className="text-2xl font-bold gradient-text">
             Khaled Akand
           </div>
           
@@ -29,7 +29,7 @@ export const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors"
+                className="text-foreground hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 hover:bg-clip-text hover:text-transparent transition-all duration-300 font-medium"
               >
                 {item.name}
               </a>
@@ -40,7 +40,7 @@ export const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -49,12 +49,12 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4">
+          <nav className="md:hidden mt-4 pb-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-4 colorful-shadow">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-foreground hover:text-primary transition-colors"
+                className="block py-2 text-foreground hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 hover:bg-clip-text hover:text-transparent transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

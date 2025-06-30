@@ -13,7 +13,8 @@ export const Skills = () => {
         { name: "Python", level: "Basic" },
         { name: "MySQL", level: "Very Good" },
         { name: "MongoDB", level: "Good" }
-      ]
+      ],
+      gradient: "from-purple-500 to-pink-500"
     },
     {
       title: "Technical Expertise",
@@ -24,7 +25,8 @@ export const Skills = () => {
         { name: "Rest API", level: "Excellent" },
         { name: "Web Development", level: "Excellent" },
         { name: "Bootstrap", level: "Very Good" }
-      ]
+      ],
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "Design & Creative",
@@ -33,7 +35,8 @@ export const Skills = () => {
         { name: "Adobe Illustrator", level: "Excellent" },
         { name: "Web Design", level: "Excellent" },
         { name: "Graphic Design", level: "Very Good" }
-      ]
+      ],
+      gradient: "from-green-500 to-emerald-500"
     },
     {
       title: "Industry Specialization",
@@ -44,7 +47,8 @@ export const Skills = () => {
         { name: "Payment Gateway", level: "Expert" },
         { name: "Telecommunications", level: "Excellent" },
         { name: "Fintech", level: "Expert" }
-      ]
+      ],
+      gradient: "from-orange-500 to-red-500"
     }
   ];
 
@@ -52,24 +56,24 @@ export const Skills = () => {
     switch (level) {
       case "Excellent":
       case "Expert":
-        return "bg-green-100 text-green-800 border-green-300";
+        return "bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0";
       case "Very Good":
-        return "bg-blue-100 text-blue-800 border-blue-300";
+        return "bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0";
       case "Good":
-        return "bg-yellow-100 text-yellow-800 border-yellow-300";
+        return "bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0";
       case "Basic":
-        return "bg-gray-100 text-gray-800 border-gray-300";
+        return "bg-gradient-to-r from-gray-400 to-gray-500 text-white border-0";
       default:
         return "bg-secondary text-secondary-foreground";
     }
   };
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Expertise</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Skills & Expertise</h2>
             <p className="text-xl text-muted-foreground">
               15+ years of technical excellence across diverse domains
             </p>
@@ -77,21 +81,22 @@ export const Skills = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {skillCategories.map((category, index) => (
-              <Card key={index} className="hover-scale">
-                <CardHeader>
-                  <CardTitle className="text-center text-xl">{category.title}</CardTitle>
+              <Card key={index} className="hover-scale colorful-shadow border-0 overflow-hidden">
+                <div className={`h-3 bg-gradient-to-r ${category.gradient}`}></div>
+                <CardHeader className="bg-white">
+                  <CardTitle className="text-center text-xl bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent">{category.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="bg-white">
                   <div className="flex flex-wrap gap-3 justify-center">
                     {category.skills.map((skill, skillIndex) => (
                       <div key={skillIndex} className="flex flex-col items-center gap-1">
                         <Badge 
                           variant="outline" 
-                          className={`${getSkillColor(skill.level)} hover:bg-primary hover:text-primary-foreground transition-colors text-center`}
+                          className={`${getSkillColor(skill.level)} hover:scale-105 transition-all duration-200 text-center shadow-md`}
                         >
                           {skill.name}
                         </Badge>
-                        <span className="text-xs text-muted-foreground">{skill.level}</span>
+                        <span className="text-xs text-muted-foreground font-medium">{skill.level}</span>
                       </div>
                     ))}
                   </div>
@@ -101,19 +106,20 @@ export const Skills = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <Card className="max-w-2xl mx-auto">
-              <CardHeader>
-                <CardTitle>Languages</CardTitle>
+            <Card className="max-w-2xl mx-auto colorful-shadow border-0 overflow-hidden">
+              <div className="h-3 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+              <CardHeader className="bg-white">
+                <CardTitle className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">Languages</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="bg-white">
                 <div className="flex flex-wrap gap-4 justify-center">
-                  <Badge variant="outline" className="bg-green-100 text-green-800 border-green-300">
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                     English - Native
                   </Badge>
-                  <Badge variant="outline" className="bg-green-100 text-green-800 border-green-300">
+                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
                     Bangla - Native
                   </Badge>
-                  <Badge variant="outline" className="bg-yellow-100 text-yellow-800 border-yellow-300">
+                  <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-md">
                     Hindi - Novice
                   </Badge>
                 </div>

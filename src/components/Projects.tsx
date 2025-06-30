@@ -11,21 +11,24 @@ export const Projects = () => {
       description: "Comprehensive e-commerce platform for the Bangladeshi market with advanced features and payment integration.",
       technologies: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript"],
       liveUrl: "https://easy.com.bd/",
-      type: "E-Commerce Platform"
+      type: "E-Commerce Platform",
+      gradient: "from-purple-500 to-pink-500"
     },
     {
       title: "SSLCommerz Payment Gateway",
       description: "Leading payment gateway solution in Bangladesh, processing millions of transactions securely.",
       technologies: ["PHP", "Laravel", "MySQL", "REST API", "Payment Processing"],
       liveUrl: "https://www.sslcommerz.com",
-      type: "Fintech Solution"
+      type: "Fintech Solution",
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "Cineplex BD Ticketing System",
       description: "Movie ticket booking platform with real-time seat selection and payment processing capabilities.",
       technologies: ["PHP", "MySQL", "jQuery", "Bootstrap", "Payment Gateway"],
       liveUrl: "https://ticket.cineplexbd.com",
-      type: "Ticketing Platform"
+      type: "Ticketing Platform",
+      gradient: "from-green-500 to-emerald-500"
     }
   ];
 
@@ -33,28 +36,31 @@ export const Projects = () => {
     {
       title: "MongoDB Certified Developer, Associate (C100DEV)",
       issuer: "Tecognize Training",
-      year: "2021"
+      year: "2021",
+      gradient: "from-green-500 to-emerald-500"
     },
     {
       title: "Google Mobile Sites Certification",
       issuer: "Google USA",
       year: "2017-2018",
-      description: "Mobile Web Development"
+      description: "Mobile Web Development",
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "BSc in Computing And Information Systems",
       issuer: "London Metropolitan University",
       year: "2005-2009",
-      description: "First Class, Major in Web Development"
+      description: "First Class, Major in Web Development",
+      gradient: "from-purple-500 to-pink-500"
     }
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects & Accomplishments</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Featured Projects & Accomplishments</h2>
             <p className="text-xl text-muted-foreground">
               Showcase of professional work and achievements
             </p>
@@ -62,32 +68,33 @@ export const Projects = () => {
 
           {/* Projects Section */}
           <div className="mb-16">
-            <h3 className="text-2xl font-semibold mb-8 text-center">Major Projects</h3>
+            <h3 className="text-2xl font-semibold mb-8 text-center bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Major Projects</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
-                <Card key={index} className="hover-scale group">
-                  <CardHeader>
+                <Card key={index} className="hover-scale group colorful-shadow border-0 overflow-hidden">
+                  <div className={`h-2 bg-gradient-to-r ${project.gradient}`}></div>
+                  <CardHeader className="bg-white">
                     <div className="flex items-center justify-between mb-2">
-                      <Badge variant="outline" className="text-xs">
+                      <Badge className={`text-xs bg-gradient-to-r ${project.gradient} text-white border-0`}>
                         {project.type}
                       </Badge>
                     </div>
-                    <CardTitle className="group-hover:text-primary transition-colors">
+                    <CardTitle className="group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-blue-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                       {project.title}
                     </CardTitle>
                     <CardDescription>
                       {project.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="bg-white">
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                        <Badge key={techIndex} className="text-xs bg-gradient-to-r from-gray-600 to-gray-700 text-white border-0">
                           {tech}
                         </Badge>
                       ))}
                     </div>
-                    <Button size="sm" variant="outline" className="w-full" asChild>
+                    <Button size="sm" className={`w-full bg-gradient-to-r ${project.gradient} text-white border-0 hover:scale-105 transition-all`} asChild>
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Visit Project
@@ -101,13 +108,16 @@ export const Projects = () => {
 
           {/* Certifications Section */}
           <div>
-            <h3 className="text-2xl font-semibold mb-8 text-center">Education & Certifications</h3>
+            <h3 className="text-2xl font-semibold mb-8 text-center bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Education & Certifications</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {certifications.map((cert, index) => (
-                <Card key={index} className="hover-scale">
-                  <CardHeader>
+                <Card key={index} className="hover-scale colorful-shadow border-0 overflow-hidden">
+                  <div className={`h-2 bg-gradient-to-r ${cert.gradient}`}></div>
+                  <CardHeader className="bg-white">
                     <div className="flex items-start gap-3">
-                      <Award className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                      <div className={`bg-gradient-to-r ${cert.gradient} p-2 rounded-full`}>
+                        <Award className="h-6 w-6 text-white" />
+                      </div>
                       <div>
                         <CardTitle className="text-lg">{cert.title}</CardTitle>
                         <CardDescription className="text-base font-medium text-foreground mt-1">

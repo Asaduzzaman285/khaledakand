@@ -17,7 +17,8 @@ export const Experience = () => {
         "Resource Allocation: Efficiently allocate resources, including budgets and personnel, to optimize IT operations",
         "Cybersecurity and Risk Management: Develop and implement cybersecurity measures",
         "Vendor Management: Evaluate, select, and manage external vendors and technology partners"
-      ]
+      ],
+      gradient: "from-purple-500 to-pink-500"
     },
     {
       title: "Software Analyst",
@@ -32,7 +33,8 @@ export const Experience = () => {
         "Supervised team of 12 technologists on BDT 10 million software development project",
         "Collaborated with cross-functional development team members to analyze potential system solutions",
         "Built outstanding and dynamic team of software engineers and developers"
-      ]
+      ],
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "Sr. Software Engineer",
@@ -43,7 +45,8 @@ export const Experience = () => {
         "Collaborated with cross-functional development team members to analyze potential system solutions",
         "Gathered and defined customer requirements to develop clear specifications",
         "Worked with project managers, developers, quality assurance and customers to resolve technical issues"
-      ]
+      ],
+      gradient: "from-green-500 to-emerald-500"
     },
     {
       title: "Software Engineer",
@@ -54,7 +57,8 @@ export const Experience = () => {
         "Coordinated with hardware and system engineering leads to gather and develop system requirements",
         "Designed and developed forward-thinking systems that meet user needs and improve productivity",
         "Collaborated with cross-functional development team members to analyze potential system solutions"
-      ]
+      ],
+      gradient: "from-orange-500 to-red-500"
     },
     {
       title: "Lecturer",
@@ -65,7 +69,8 @@ export const Experience = () => {
         "Wrote and modernized PHP course materials, including syllabi, writing assignments and exams",
         "Collaborated with Lecturers to create dynamic, ongoing curriculum development program",
         "Tracked student assignments, attendance and test scores in online database"
-      ]
+      ],
+      gradient: "from-indigo-500 to-purple-500"
     },
     {
       title: "Web Developer & Designer",
@@ -77,16 +82,17 @@ export const Experience = () => {
         "Designed sites to be compatible with top browsers, including Firefox, Chrome and Safari",
         "Designed, implemented and monitored web pages and sites for continuous improvement",
         "Determined coding requirements for site creation, including e-commerce capability"
-      ]
+      ],
+      gradient: "from-teal-500 to-blue-500"
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-muted/30">
+    <section id="experience" className="py-20 bg-gradient-to-br from-emerald-50 via-cyan-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Work Experience</h2>
             <p className="text-xl text-muted-foreground">
               15+ years of professional growth and technical leadership
             </p>
@@ -94,11 +100,12 @@ export const Experience = () => {
 
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <Card key={index} className="hover-scale">
-                <CardHeader>
+              <Card key={index} className="hover-scale colorful-shadow border-0 overflow-hidden">
+                <div className={`h-3 bg-gradient-to-r ${exp.gradient}`}></div>
+                <CardHeader className="bg-white">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div>
-                      <CardTitle className="text-xl text-primary">{exp.title}</CardTitle>
+                      <CardTitle className={`text-xl bg-gradient-to-r ${exp.gradient} bg-clip-text text-transparent`}>{exp.title}</CardTitle>
                       <CardDescription className="text-lg font-medium text-foreground mt-1">
                         {exp.company}
                       </CardDescription>
@@ -115,11 +122,11 @@ export const Experience = () => {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="bg-white">
                   <ul className="space-y-2">
                     {exp.responsibilities.map((responsibility, respIndex) => (
                       <li key={respIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <span className="text-primary mt-1.5 text-xs">●</span>
+                        <span className={`bg-gradient-to-r ${exp.gradient} text-transparent bg-clip-text mt-1.5 text-xs font-bold`}>●</span>
                         <span>{responsibility}</span>
                       </li>
                     ))}
