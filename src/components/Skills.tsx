@@ -14,7 +14,7 @@ export const Skills = () => {
         { name: "MySQL", level: "Very Good" },
         { name: "MongoDB", level: "Good" }
       ],
-      gradient: "from-purple-500 to-pink-500"
+      gradient: "from-blue-800 to-blue-900"
     },
     {
       title: "Technical Expertise",
@@ -26,7 +26,7 @@ export const Skills = () => {
         { name: "Web Development", level: "Excellent" },
         { name: "Bootstrap", level: "Very Good" }
       ],
-      gradient: "from-blue-500 to-cyan-500"
+      gradient: "from-slate-700 to-blue-800"
     },
     {
       title: "Design & Creative",
@@ -36,7 +36,7 @@ export const Skills = () => {
         { name: "Web Design", level: "Excellent" },
         { name: "Graphic Design", level: "Very Good" }
       ],
-      gradient: "from-green-500 to-emerald-500"
+      gradient: "from-blue-900 to-slate-800"
     },
     {
       title: "Industry Specialization",
@@ -48,7 +48,7 @@ export const Skills = () => {
         { name: "Telecommunications", level: "Excellent" },
         { name: "Fintech", level: "Expert" }
       ],
-      gradient: "from-orange-500 to-red-500"
+      gradient: "from-slate-800 to-blue-700"
     }
   ];
 
@@ -56,20 +56,20 @@ export const Skills = () => {
     switch (level) {
       case "Excellent":
       case "Expert":
-        return "bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0";
+        return "bg-gradient-to-r from-blue-800 to-blue-900 text-white border-0";
       case "Very Good":
-        return "bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0";
+        return "bg-gradient-to-r from-blue-600 to-blue-700 text-white border-0";
       case "Good":
-        return "bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0";
+        return "bg-gradient-to-r from-slate-600 to-blue-600 text-white border-0";
       case "Basic":
-        return "bg-gradient-to-r from-gray-400 to-gray-500 text-white border-0";
+        return "bg-gradient-to-r from-slate-500 to-slate-600 text-white border-0";
       default:
         return "bg-secondary text-secondary-foreground";
     }
   };
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <section id="skills" className="py-20 bg-gradient-to-br from-blue-50 via-slate-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -107,19 +107,19 @@ export const Skills = () => {
 
           <div className="mt-12 text-center">
             <Card className="max-w-2xl mx-auto colorful-shadow border-0 overflow-hidden">
-              <div className="h-3 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+              <div className="h-3 bg-gradient-to-r from-blue-700 to-slate-700"></div>
               <CardHeader className="bg-white">
-                <CardTitle className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">Languages</CardTitle>
+                <CardTitle className="bg-gradient-to-r from-blue-700 to-slate-700 bg-clip-text text-transparent">Languages</CardTitle>
               </CardHeader>
               <CardContent className="bg-white">
                 <div className="flex flex-wrap gap-4 justify-center">
-                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
+                  <Badge className="bg-gradient-to-r from-blue-800 to-blue-900 text-white border-0 shadow-md">
                     English - Native
                   </Badge>
-                  <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0 shadow-md">
+                  <Badge className="bg-gradient-to-r from-blue-800 to-blue-900 text-white border-0 shadow-md">
                     Bangla - Native
                   </Badge>
-                  <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white border-0 shadow-md">
+                  <Badge className="bg-gradient-to-r from-slate-600 to-blue-600 text-white border-0 shadow-md">
                     Hindi - Novice
                   </Badge>
                 </div>

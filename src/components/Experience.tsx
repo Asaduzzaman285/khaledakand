@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, MapPin, Building } from "lucide-react";
@@ -18,7 +17,7 @@ export const Experience = () => {
         "Cybersecurity and Risk Management: Develop and implement cybersecurity measures",
         "Vendor Management: Evaluate, select, and manage external vendors and technology partners"
       ],
-      gradient: "from-purple-500 to-pink-500"
+      gradient: "from-blue-800 to-blue-900"
     },
     {
       title: "Software Analyst",
@@ -34,7 +33,7 @@ export const Experience = () => {
         "Collaborated with cross-functional development team members to analyze potential system solutions",
         "Built outstanding and dynamic team of software engineers and developers"
       ],
-      gradient: "from-blue-500 to-cyan-500"
+      gradient: "from-slate-700 to-blue-800"
     },
     {
       title: "Sr. Software Engineer",
@@ -46,7 +45,7 @@ export const Experience = () => {
         "Gathered and defined customer requirements to develop clear specifications",
         "Worked with project managers, developers, quality assurance and customers to resolve technical issues"
       ],
-      gradient: "from-green-500 to-emerald-500"
+      gradient: "from-blue-900 to-slate-800"
     },
     {
       title: "Software Engineer",
@@ -58,7 +57,7 @@ export const Experience = () => {
         "Designed and developed forward-thinking systems that meet user needs and improve productivity",
         "Collaborated with cross-functional development team members to analyze potential system solutions"
       ],
-      gradient: "from-orange-500 to-red-500"
+      gradient: "from-slate-800 to-blue-700"
     },
     {
       title: "Lecturer",
@@ -70,7 +69,7 @@ export const Experience = () => {
         "Collaborated with Lecturers to create dynamic, ongoing curriculum development program",
         "Tracked student assignments, attendance and test scores in online database"
       ],
-      gradient: "from-indigo-500 to-purple-500"
+      gradient: "from-blue-700 to-slate-700"
     },
     {
       title: "Web Developer & Designer",
@@ -83,12 +82,12 @@ export const Experience = () => {
         "Designed, implemented and monitored web pages and sites for continuous improvement",
         "Determined coding requirements for site creation, including e-commerce capability"
       ],
-      gradient: "from-teal-500 to-blue-500"
+      gradient: "from-slate-600 to-blue-700"
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-emerald-50 via-cyan-50 to-blue-50">
+    <section id="experience" className="py-20 bg-gradient-to-br from-blue-50 via-slate-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">

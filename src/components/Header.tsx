@@ -29,7 +29,7 @@ export const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 hover:bg-clip-text hover:text-transparent transition-all duration-300 font-medium"
+                className="text-foreground hover:bg-gradient-to-r hover:from-blue-800 hover:to-slate-700 hover:bg-clip-text hover:text-transparent transition-all duration-300 font-medium"
               >
                 {item.name}
               </a>
@@ -40,7 +40,7 @@ export const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 hover:text-white"
+            className="md:hidden hover:bg-gradient-to-r hover:from-blue-800 hover:to-slate-700 hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -49,12 +49,12 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-4 colorful-shadow">
+          <nav className="md:hidden mt-4 pb-4 bg-gradient-to-r from-blue-50 to-slate-50 rounded-lg p-4 colorful-shadow">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-foreground hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 hover:bg-clip-text hover:text-transparent transition-all duration-300 font-medium"
+                className="block py-2 text-foreground hover:bg-gradient-to-r hover:from-blue-800 hover:to-slate-700 hover:bg-clip-text hover:text-transparent transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

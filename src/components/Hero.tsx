@@ -7,9 +7,9 @@ export const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 gradient-bg relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-900/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-slate-800/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-800/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -38,7 +38,7 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="hover-scale bg-white text-purple-600 hover:bg-white/90 shadow-lg" asChild>
+            <Button size="lg" className="hover-scale bg-white text-blue-900 hover:bg-white/90 shadow-lg" asChild>
               <a href="#contact">
                 <Mail className="mr-2 h-4 w-4" />
                 Get In Touch
