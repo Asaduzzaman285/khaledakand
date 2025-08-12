@@ -26,7 +26,7 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-            Hi, I'm <span className="gradient-text bg-white">Khaled Akand</span>
+            Hi, I'm <span className="text-orange-500">Khaled Akand</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4 font-semibold">
             Deputy General Manager & Software Analyst
