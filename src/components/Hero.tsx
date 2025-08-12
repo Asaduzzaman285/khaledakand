@@ -17,7 +17,7 @@ export const Hero = () => {
           <div className="mb-8">
             <div className="relative inline-block">
               <img 
-                src="/lovable-uploads/6a79c478-e914-41e9-b8ca-8a9c9b7a03d6.png" 
+                src="/lovable-uploads/9e6a7f96-aa1c-49d4-bb6c-3b3b1a142cfa.png" 
                 alt="Khaled Akand"
                 className="w-48 h-48 rounded-full mx-auto mb-6 object-cover border-4 border-white/30 shadow-2xl colorful-shadow backdrop-blur-sm"
               />
